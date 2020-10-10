@@ -6,11 +6,15 @@ import { Users } from '../shared/users';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
-export class UserListComponent implements OnInit {
-  users = Users;
+export class UserListComponent{
   constructor() { }
+  users = Users;
+  liked = 0;
 
-  ngOnInit(): void {
+  onLiked(agreed: boolean): void{
+    if (agreed === true){
+      this.liked++;
+    }
   }
 
 }

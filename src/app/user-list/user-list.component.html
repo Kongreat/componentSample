@@ -1,2 +1,4 @@
 <h2>This is master</h2>
-<app-user-detail *ngFor="let user of users" [user]="user" [id]="user.id"></app-user-detail>
+<h4>Liked: {{liked}}</h4>
+
+<app-user-detail *ngFor="let user of users" [user]="user" [id]="user.id" (rated)="onLiked($event)"></app-user-detail>
