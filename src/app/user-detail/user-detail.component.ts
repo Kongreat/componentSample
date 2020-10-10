@@ -20,8 +20,11 @@ export class UserDetailComponent implements OnInit{
 
   constructor() {  }
 
+  // creating emitter for task 1
   @Output() rated = new EventEmitter<boolean>();
   didRate = false;
+
+
   // tslint:disable-next-line:variable-name
   private _id = 0;
 
@@ -33,15 +36,13 @@ export class UserDetailComponent implements OnInit{
   }
 
 
-
-
-
   increaseRating(flag: boolean): void {
     this.user.rating++;
     this.rated.emit(flag);
     this.didRate = true;
   }
 
+  // second task
   addId(): void{
     this.user.id++;
   }

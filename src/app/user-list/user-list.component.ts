@@ -10,8 +10,10 @@ import {UserDetailComponent} from '../user-detail/user-detail.component';
 export class UserListComponent implements AfterViewInit{
   constructor() { }
   users = Users;
-  liked = 0;
+  likes = 0;
 
+
+  // task 2
   @ViewChild(UserDetailComponent)
   private UserComponent: UserDetailComponent;
   ngAfterViewInit(): void{
@@ -19,10 +21,10 @@ export class UserListComponent implements AfterViewInit{
 
   addId() {this.UserComponent.addId(); }
 
-
+  // task 1
   onLiked(agreed: boolean): void{
     if (agreed === true){
-      this.liked++;
+      this.likes++;
     }
   }
 

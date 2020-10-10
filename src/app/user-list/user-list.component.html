@@ -1,5 +1,5 @@
 <h2>This is master</h2>
-<h4>Liked: {{liked}}</h4>
+<h4>Liked: {{likes}}</h4>
 <button (click)="addId()">Add id</button>
 
 <app-user-detail *ngFor="let user of users" [user]="user" [id]="user.id" (rated)="onLiked($event)"></app-user-detail>
